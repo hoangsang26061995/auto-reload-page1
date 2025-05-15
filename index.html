@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Auto Reload Page</title>
+</head>
+<body>
+  <h2>Trang này sẽ tự động reload sau mỗi 30 giây</h2>
+  <p id="time"></p>
+
+  <script>
+    function updateTime() {
+      document.getElementById('time').textContent = new Date().toLocaleString();
+    }
+
+    updateTime();
+
+    setInterval(function() {
+      updateTime();
+      location.reload();
+    }, 30000); // reload sau 30 giây
+  </script>
+</body>
+</html>
